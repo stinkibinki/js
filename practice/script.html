@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* id selector */
+        /* #p1 {
+            color: aqua;
+        } */
+        /* class selector */
+        /* .paragraf {
+            color: aqua;
+        }*/
+
+        #mover {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        .showSpaces{
+            white-space: pre;
+        }
+
+    </style>
+    <!-- <script>
+        console.log("sex");
+        //alert("sexxx");
+
+        const ime = "Lan";
+        let age = 20.980808;
+        var isStupid = true;
+        let array = [1, 2, 3, 4, "poop", true, "abc"];
+        const student = {
+            "ime":"Nina",
+            "age":2,
+            "toys":["a", 1, null]
+        };
+        let a; //undefined
+        array.push(false); //add element
+        let sex = false;
+        while (sex) {
+            console.log("we have sex");
+        }
+
+        for (let index = 0; index < array.length; index++) {
+            const element = array[index];
+            console.log(element);
+        }
+
+
+
+    </script> -->
+</head>
+<body>
+
+    <!-- ctrl+k+c = commnet -->
+
+    <!-- <p class="paragraf" style="color: blue;">
+        
+    </p>
+    <p id="p1">
+        text
+    </p>
+
+
+    <button onclick="abcde()" on>
+        food
+    </button>
+
+    <script>
+        function abcde() {
+            console.log(5655656)
+            alert("food now!!!");            
+        }
+    </script> -->
+
+
+    <span id="mover" class="showSpaces" onkeydown="moveit($event)">
+         o
+        -|-
+        /\
+    </span>
+
+    <span id="obstacle" class="showSpaces">
+        |       |
+        |       |
+        |       |
+        |       |
+        |       |
+        |       |
+        |       |
+        |       |
+        |       |
+        ______
+    </span>
+
+    <script>
+        const func = () => {};
+
+        const target = document.getElementById("mover");
+        
+        let x = 0;
+        let y = 0;
+
+        document.addEventListener("keydown", (event) => {
+            const keyPressed = event.key.toLowerCase();
+            switch (keyPressed) {
+                case "w":
+                    y = y - 10;
+                    break;
+                case "a":
+                    x = x - 10;
+                    break;
+                case "s":
+                    y = y + 10;
+                    break;
+                case "d":
+                    x = x + 10;
+                    break;
+
+            }
+            target.style.top = `${y}px`;
+            target.style.left = `${x}px`;
+        })
+        function moveit($event) {
+            console.log($event);
+        }
+    </script>
+
+</body>
+</html>
+
+<!-- <script>
+    const el = document.getElementById("p1");
+    el.innerHTML = "sex";
+    el.setAttribute("style", "color:red;");
+</script> -->

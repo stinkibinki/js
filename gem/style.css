@@ -1,0 +1,14 @@
+span {
+    white-space: pre-wrap;
+}
+
+#character {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#obstacle {
+    position: absolute;
+    left: 30%;
+}
